@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 //servicios
 import { TravelsService } from './services/travels.service';
+import { PassengersService } from './services/passengers.service';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
@@ -23,7 +24,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     FormsModule
   ],
   providers: [
-    TravelsService
+    TravelsService,
+    PassengersService
   ],
   bootstrap: [AppComponent]
 })
