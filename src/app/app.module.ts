@@ -10,12 +10,14 @@ import { PassengersService } from './services/passengers.service';
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { FilterPassengerListPipe } from './pipe/filter-passenger-list.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     routingComponents,
+    FilterPassengerListPipe,
   ],
   imports: [
     BrowserModule,

@@ -13,6 +13,8 @@ export class PassengersListComponent implements OnInit {
     successMsg: string = '';
     errorMsg: string = '';
 
+    filterPassenger = '';
+
     constructor(private _service: PassengersService) { }
 
     ngOnInit() {

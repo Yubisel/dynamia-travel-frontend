@@ -4,6 +4,8 @@
       <h3 class="mb-4">Lista de pasajeros</h3>
   
       <a routerLink="/passengers/add" class="btn btn-sm btn-success mb-4"><i class="fas fa-plus"></i> Crear pasajero</a>
+
+      <input type="text" name="filterPassenger" [(ngModel)]="filterPassenger" class="d-block form-control mb-4" placeholder="Buscar pasajero por Cédula o Nombre">
   
       <div class="alert alert-success fade show" role="alert" *ngIf="successMsg">
         {{successMsg}}
@@ -25,7 +27,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let passenger of passengers; index as i">
+          <tr *ngFor="let passenger of passengers | filterPassengerList: filterPassenger; index as i ">
             <th class="text-center" scope="row">{{i+1}}</th>
             <td>{{passenger.ci}}</td>
             <td>{{passenger.name}}</td>
