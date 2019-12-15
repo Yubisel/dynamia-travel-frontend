@@ -1,1 +1,49 @@
-<p>passengers-list works!</p>
+<section class="row">
+    <div class="col-12">
+  
+      <h3 class="mb-4">Lista de pasajeros</h3>
+  
+      <a routerLink="/passengers/add" class="btn btn-sm btn-success mb-4"><i class="fas fa-plus"></i> Crear pasajero</a>
+  
+      <div class="alert alert-success fade show" role="alert" *ngIf="successMsg">
+        {{successMsg}}
+      </div>
+    
+      <div class="alert alert-danger fade show" role="alert" *ngIf="errorMsg">
+        {{errorMsg}}
+      </div>
+  
+      <table class="table table-hover table-sm table-striped">
+        <thead>
+          <tr class="text-center">
+            <th scope="col">No.</th>
+            <th scope="col">Cédula</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Email</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let passenger of passengers; index as i">
+            <th class="text-center" scope="row">{{i+1}}</th>
+            <td>{{passenger.ci}}</td>
+            <td>{{passenger.name}}</td>
+            <td>{{passenger.phone}}</td>
+            <td>{{passenger.email}}</td>
+            <td class="text-center action-list">
+              <button routerLink="/passengers/{{passenger.id}}" class="search-action btn btn-sm btn-primary">
+                <i class="fas fa-info-circle"></i>
+              </button>
+              <button  routerLink="/passengers/edit/{{passenger.id}}" class="edit-action btn btn-sm btn-success">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button (click)="deletePassenger(passenger.id)" class="remove-action btn btn-sm btn-danger">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>

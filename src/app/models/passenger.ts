@@ -1,4 +1,4 @@
-export class Travel{
+export class Passenger {
     constructor(
         public id: string,
         public ci: string,

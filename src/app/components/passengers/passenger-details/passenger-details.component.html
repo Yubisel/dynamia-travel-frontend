@@ -1,1 +1,45 @@
-<p>passenger-details works!</p>
+<section class="row details-section">
+    <div class="col-12">
+      <h3 class="mb-4">Detalles del pasajero</h3>
+      <a routerLink="/passengers" class="btn btn-sm btn-primary align-self-end"> <i class="fa fa-reply"></i> Volver</a>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <label>Cédula: </label>
+          {{passenger.ci}}
+        </li>
+        <li class="list-group-item">
+          <label>Nombre: </label>
+          {{passenger.name}}
+        </li>
+        <li class="list-group-item">
+          <label>Teléfono: </label>
+          {{passenger.phone}}
+        </li>
+        <li class="list-group-item">
+          <label>Correo electrónico: </label>
+          {{passenger.email}}
+        </li>
+      </ul>
+
+      <h5 class="mt-5 mb-4">Detalles del viaje</h5>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <label>Fecha: </label>
+          {{travel.travel_date | date: 'dd/MM/yyyy'}}
+        </li>
+        <li class="list-group-item">
+          <label>Origen: </label>
+          {{travel.origin}}
+        </li>
+        <li class="list-group-item">
+          <label>Destion: </label>
+          {{travel.destination}}
+        </li>
+        <li class="list-group-item">
+          <label>Costo: </label>
+          {{travel.cost}}
+        </li>
+      </ul>
+    </div>
+  </section>
