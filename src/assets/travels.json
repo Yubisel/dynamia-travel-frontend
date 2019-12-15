@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "travel_date": "2019-12-10",
+        "origin": "ecuador",
+        "destination": "nicaragua",
+        "cost": 280,
+        "created_at": "2019-12-13 20:22:46",
+        "updated_at": "2019-12-13 20:22:46"
+    },
+    {
+        "id": 2,
+        "travel_date": "2019-12-10",
+        "origin": "mexico",
+        "destination": "honduras",
+        "cost": 2045,
+        "created_at": "2019-12-13 20:23:07",
+        "updated_at": "2019-12-13 20:23:07"
+    },
+    {
+        "id": 3,
+        "travel_date": "2019-12-10",
+        "origin": "cuba",
+        "destination": "canada",
+        "cost": 2855,
+        "created_at": "2019-12-13 20:23:23",
+        "updated_at": "2019-12-13 20:23:23"
+    },
+    {
+        "id": 4,
+        "travel_date": "2019-12-06",
+        "origin": "cuba",
+        "destination": "uruguay",
+        "cost": 668,
+        "created_at": "2019-12-13 20:23:45",
+        "updated_at": "2019-12-13 20:24:37"
+    }
+]

@@ -1,0 +1,46 @@
+<section class="row">
+  <div class="col-12">
+    <h3 class="mb-4">Crear viaje</h3>
+    
+    <div class="alert alert-success fade show" role="alert" *ngIf="successMsg">
+      {{successMsg}}
+    </div>
+  
+    <div class="alert alert-danger fade show" role="alert" *ngIf="errorMsg">
+      {{errorMsg}}
+    </div>
+
+    <div class="col-12 col-md-6 offset-md-3">
+      <form class="card" #travelForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <div class="form-group form-group-sm">
+            <label for="travel_date">Fecha</label>
+            <input type="date" class="form-control form-control-sm" id="travel_date" name="travel_date" [ngModel]="travelModel.travel_date | date: 'yyyy-MM-dd'" (ngModelChange)="travelModel.travel_date=$event">
+          </div>
+          <div class="form-group">
+            <label for="origin">Origen</label>
+            <input type="text" class="form-control form-control-sm" id="origin" name="origin"  [(ngModel)]="travelModel.origin">
+          </div>
+          <div class="form-group">
+            <label for="destination">Destino</label>
+            <input type="text" class="form-control form-control-sm" id="destination" name="destination" [(ngModel)]="travelModel.destination">
+          </div>
+          <div class="form-group">
+            <label for="cost">Costo</label>
+            <input type="number" class="form-control form-control-sm" id="cost" name="cost"  [(ngModel)]="travelModel.cost">
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button type="submit" class="btn btn-sm btn-success mr-3">
+            <i class="fa fa-save"></i>
+            Guardar
+          </button>
+          <a routerLink='/travels' class="btn btn-sm btn-secondary">
+            <i class="fa fa-ban"></i>
+            Cancelar
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

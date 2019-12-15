@@ -1,0 +1,24 @@
+<section class="row details-section">
+  <div class="col-12">
+    <h3 class="mb-4">Detalles del viaje</h3>
+    <a routerLink="/travels" class="btn btn-sm btn-primary align-self-end"> <i class="fa fa-reply"></i> Volver</a>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <label>Fecha: </label>
+        {{travel.travel_date | date: 'dd/MM/yyyy'}}
+      </li>
+      <li class="list-group-item">
+        <label>Origen: </label>
+        {{travel.origin}}
+      </li>
+      <li class="list-group-item">
+        <label>Destion: </label>
+        {{travel.destination}}
+      </li>
+      <li class="list-group-item">
+        <label>Costo: </label>
+        {{travel.cost}}
+      </li>
+    </ul>
+  </div>
+</section>

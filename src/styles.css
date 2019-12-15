@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+* {
+  outline: none;
+}
+
+.action-list button {
+  margin: 0 5px;
+}
+/* .seach-action,
+.edit-action,
+.remove-action {
+  border: none;
+  background: transparent;
+} */
+
+/* .seach-action {
+  color: #007bff;
+}
+
+.edit-action {
+  color: #28a745;
+}
+
+.remove-action {
+  color: #dc3545;
+} */
+
+.details-section label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  font-weight: bold;
+  padding-right: 10px;
+}
