@@ -1,1 +1,56 @@
-<p>passenger-form works!</p>
+<section class="row">
+  <div class="col-12">
+    <h3 class="mb-4" *ngIf="!editing">Crear pasajero</h3>
+    <h3 class="mb-4" *ngIf="editing">Editar pasajero</h3>
+
+    <div class="alert alert-success fade show" role="alert" *ngIf="successMsg">
+      {{successMsg}}
+    </div>
+
+    <div class="alert alert-danger fade show" role="alert" *ngIf="errorMsg">
+      {{errorMsg}}
+    </div>
+
+    <div class="col-12 col-md-6 offset-md-3">
+      <form class="card" #passengerForm="ngForm" (ngSubmit)="onSubmit()">
+        <div class="card-body">
+          <div class="form-group form-group-sm">
+            <label for="ci">Cédula</label>
+            <input type="text" class="form-control form-control-sm" id="ci" name="ci" [(ngModel)]="passengerModel.ci">
+          </div>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control form-control-sm" id="name" name="name"
+              [(ngModel)]="passengerModel.name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input type="text" class="form-control form-control-sm" id="phone" name="phone"
+              [(ngModel)]="passengerModel.phone">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" class="form-control form-control-sm" id="email" name="email"
+              [(ngModel)]="passengerModel.email">
+          </div>
+          <div class="form-group">
+            <label for="email">Viaje</label>
+            <select class="form-control form-control-sm" id="travel_id" name="travel_id" [(ngModel)]="passengerModel.travel_id">
+              <option *ngFor="let travel of travels" [ngValue]="travel.id">{{travel.origin}} - {{travel.destination}} ({{travel.travel_date | date: 'dd/MM/yyyy'}})</option>
+            </select>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <button type="submit" class="btn btn-sm btn-success mr-3">
+            <i class="fa fa-save"></i>
+            Guardar
+          </button>
+          <a routerLink='/passengers' class="btn btn-sm btn-secondary">
+            <i class="fa fa-ban"></i>
+            Cancelar
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
