@@ -30,7 +30,7 @@
           <td>{{travel.travel_date | date: 'dd/MM/yyyy'}}</td>
           <td>{{travel.origin}}</td>
           <td>{{travel.destination}}</td>
-          <td class="text-right">{{travel.cost}}</td>
+          <td class="text-right">{{travel.cost|currency}}</td>
           <td class="text-center action-list">
             <button routerLink="/travels/{{travel.id}}" class="search-action btn btn-sm btn-primary">
               <i class="fas fa-info-circle"></i>

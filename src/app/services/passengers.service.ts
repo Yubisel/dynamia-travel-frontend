@@ -3,13 +3,14 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import { IPassenger } from '../interfaces/passenger';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { API_URL } from './../config/config';
 
 @Injectable({
     providedIn: 'root'
 })
 export class PassengersService {
 
-    _url: string = 'http://localhost:8000/api/passengers';
+    _url: string = API_URL + 'passengers';
 
     constructor(private http: HttpClient) { }
 
