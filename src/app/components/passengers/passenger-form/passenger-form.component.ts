@@ -51,7 +51,10 @@ export class PassengerFormComponent implements OnInit {
                         this.editing = false;
                         this.router.navigate(['/passengers', data.id]);
                     },
-                    err => console.error(err)
+                    err => {
+                        console.error(err);
+                        this.errorMsg = err.error.email;
+                    }
                 )
         } else {
             this._service.savePassenger(this.passengerModel).subscribe(
@@ -61,7 +64,10 @@ export class PassengerFormComponent implements OnInit {
                     // this.successMsg = 'Viaje creado de forma satisfactoria';
                     // this.passengerModel = new Passenger(new Date, '', '', 0);
                 },
-                error => console.error(error)
+                err => {
+                    console.error(err);
+                    this.errorMsg = err.error.email;
+                }
             )
         }
     }

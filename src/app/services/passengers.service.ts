@@ -38,7 +38,8 @@ export class PassengersService {
     }
 
     savePassenger(Passenger): Observable<any> {
-        return this.http.post(this._url, Passenger);
+        return this.http.post(this._url, Passenger)
+        .pipe(catchError(this.errorHandler));
     }
 
     updatePassenger(id, Passenger): Observable<any> {
