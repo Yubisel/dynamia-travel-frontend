@@ -53,6 +53,7 @@ Nombre: passengers
 #### Tabla Viajes
 
 Nombre: travels
+
 | Nombre	|Tipo       	|Cotejamiento       | Otros     |
 |-----------|:-------------:|:-----------------:|----------:|
 |id         |int(11)        |                   |PK         |
