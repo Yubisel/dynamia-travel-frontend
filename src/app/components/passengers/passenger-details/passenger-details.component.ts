@@ -13,7 +13,7 @@ import { Passenger } from './../../../models/passenger';
 })
 export class PassengerDetailsComponent implements OnInit {
 
-  passenger: Passenger;
+  passenger: Passenger = new Passenger('0', '', '', '', '', 0);
   travel = {};
 
   constructor(private ruta: ActivatedRoute, private _servicioPassenger: PassengersService, private _servicioTravel: TravelsService) {

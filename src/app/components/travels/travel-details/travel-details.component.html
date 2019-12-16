@@ -20,5 +20,27 @@
         {{travel.cost|currency}}
       </li>
     </ul>
+
+    <h4 class="mt-5 mb-4">Listado de pasajeros del viaje</h4>
+    <table class="table table-hover table-sm table-striped">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">No.</th>
+          <th scope="col">Cédula</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let passenger of passengers; index as i ">
+          <th class="text-center" scope="row">{{i+1}}</th>
+          <td>{{passenger.ci}}</td>
+          <td>{{passenger.name}}</td>
+          <td>{{passenger.phone}}</td>
+          <td>{{passenger.email}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
