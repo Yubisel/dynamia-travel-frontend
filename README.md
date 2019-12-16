@@ -70,7 +70,7 @@ Nombre: travels
 Las especificaciones del backend y frontend de la sección superior constan como requerimientos para el montaje y correcto funcionamiento de la solución planteada
 
 ### Backend
-- Crear la base de datos en mysql con nombre descriptivo, nombre usado dynamia_travel. Cargar la base de datos que se encuentra en el fichero script_bd.sql en la raiz del repositorio del backend.
+- Crear la base de datos en mysql con nombre descriptivo, nombre usado dynamia_travel. Cargar la base de datos que se encuentra en el fichero ```dynamia_travel.sql``` en la raiz del repositorio del backend.
 - Descargar el sistema de la url [https://github.com/Yubisel/dynamia-travel-backend](https://github.com/Yubisel/dynamia-travel-backend)
 - Ejecutar desde una terminal ubicados en la raiz del proyecto ```composer install``` para descargar las dependencias
 - Duplicar el fichero en la raiz del proyecto ```.env.example``` a ```.env``` y configurarlo de acuerdo a los parametros de su ambiente
